@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Verificare cod permis de conducere 🇵🇱 Polonia</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: block;
+            margin-top: 50px;
+            padding-left: 0px;
+            justify-content: center;
+            overflow-x: hidden;
+            text-align: center;
+            align-items: center;
+            background-color: whitesmoke;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+        }
+
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .popup {
+            display: none;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 75%;
+            height: auto;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            border-color: black;
+            background-color: #d6d6d6;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            border: 3px solid black;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .watermark {
+            position: fixed;
+            top: 5px;
+            right: 5px;
+            width: 40px;
+            height: 40px;
+        }
+
+        #popup-text {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .head {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px solid black;
+            width: 100%;
+        }
+
+        #ani {
+            width: 50%;
+            height: 25px;
+            border: 3px solid #000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+    <script>
+        function afiseazaPopup(an) {
+            var popupContainer = document.getElementById("popup-container");
+            var popup = document.getElementById("popup");
+            var popupText = document.getElementById("popup-text");
+            var popupImage = document.getElementById("popup-image");
+
+            var textPrestabilit = getLitera(an); // Funcție pentru a obține litera prestabilită
+
+            popupText.textContent = "Litera seriei de la codul de bare (13) este: " + textPrestabilit;
+            popupImage.src = "https://i.ibb.co/1LDVh6q/IMG-20231210-124156.jpg"; // Înlocuiește cu URL-ul real al imaginii
+            // Afișează containerul cu blur și fereastra pop-up
+            popupContainer.style.display = "flex";
+            popup.style.display = "block";
+        }
+
+
+        function inchidePopup() {
+            var popupContainer = document.getElementById("popup-container");
+            var popup = document.getElementById("popup");
+
+            // Ascunde containerul cu blur și fereastra pop-up
+            popupContainer.style.display = "none";
+            popup.style.display = "none";
+        }
+
+
+
+
+        function getLitera(an) {
+            // Adaugă condiții pentru a asocia fiecărui an o literă prestabilită
+            if (an === "1999") {
+                return "A";
+            } else if (an === "2000") {
+                return "B";
+            } else if (an === "2001") {
+                return "C";
+            } else if (an === "2002") {
+                return "D";
+            } else if (an === "2003") {
+                return "E";
+            } else if (an === "2004") {
+                return "F";
+            } else if (an === "2005") {
+                return "G";
+            } else if (an === "2006") {
+                return "H";
+            } else if (an === "2007") {
+                return "I";
+            } else if (an === "2008") {
+                return "J";
+            } else if (an === "2009") {
+                return "K";
+            } else if (an === "2010") {
+                return "L";
+            } else if (an === "2011") {
+                return "M";
+            } else if (an === "2012") {
+                return "N";
+            } else if (an === "2013") {
+                return "O (pentru cele emise în decembrie 2013 codul va fi P)";
+            } else if (an === "2014") {
+                return "P";
+            } else if (an === "2015") {
+                return "Q";
+            } else if (an === "2016") {
+                return "R";
+            } else if (an === "2017") {
+                return "S";
+            } else if (an === "2018") {
+                return "U";
+            } else if (an === "2019") {
+                return "W";
+            } else if (an === "2020") {
+                return "Y";
+            } else if (an === "2021") {
+                return "Z";
+            } else if (an === "2022") {
+                return "AA";
+            } else if (an === "2023") {
+                return "BA";
+            } else if (an === "2024") {
+                return "CA";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="head">
+        <p>Verificare cod permis de conducere<br> 🇵🇱 Polonia 🇵🇱</p>
+        <hr>
+        <label class="ani" for="ani">Selectează anul eliberării (4.a):</label><br>
+        <select id="ani" onchange="afiseazaPopup(this.value)">
+            <option value="" disabled selected>Anul eliberării</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <!-- Adaugă opțiuni pentru alți ani -->
+        </select>
+    </div>
+    <div id="popup-container" class="popup-container">
+        <div id="popup" class="popup">
+            <p id="popup-text"></p>
+            <img id="popup-image" alt="Imagine"><br><br>
+            <button onclick="inchidePopup()">OK</button>
+        </div>
+    </div>
+    <img class="watermark" src="https://i.ibb.co/q9v4wW9/20230913-133046.png" alt="20230913-133046" border="0"></a>
+</body>
+
+</html>
